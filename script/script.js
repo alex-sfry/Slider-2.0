@@ -28,7 +28,8 @@ function initSlider() {
 	function initImages() {
 		images.forEach((image, index) => {
 			const imageDiv = `<div class="image n${index} ${index === 0 ? "active" : ""}"  data-index="${index}">
-            <img src='${images[index].url}' alt="${images[index].title}" width="400" height="400"></div>`;
+            <img src='${images[index].url}' alt="${images[index].title}" width="400" height="400" loading="lazy">
+            </div>`;
 			sliderImages.innerHTML += imageDiv;
 		});
 	}
